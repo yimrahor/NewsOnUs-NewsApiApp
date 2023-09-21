@@ -77,10 +77,13 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let selectedCell = tableView.cellForRow(at: indexPath)
-        selectedCell?.backgroundColor = UIColor.blue
-        selectedCell?.selectionStyle = .blue
+        if let selectedCell = tableView.cellForRow(at: indexPath) {
+            selectedCell.contentView.backgroundColor = #colorLiteral(red: 0.08454743773, green: 0.2466894388, blue: 0.3876488507, alpha: 1)
+            selectedCell.backgroundColor = UIColor.blue
+            selectedCell.selectionStyle = .blue
+            }
         
+       
         let categories = Categories.allCases[indexPath.row].categoryName
         let storyboard = UIStoryboard(name: "TabBar", bundle: nil)        
         if let vc = storyboard.instantiateViewController(identifier: "AllNewsViewController") as? AllNewsViewController {
@@ -89,5 +92,12 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
         self.delegate?.hideSideMenu()
     }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let selectedCell = tableView.cellForRow(at: indexPath) {
+            selectedCell.contentView.backgroundColor = #colorLiteral(red: 0.8684186339, green: 0.8584913611, blue: 0.8543596268, alpha: 1)
+            }
+    }
+
 
 }
