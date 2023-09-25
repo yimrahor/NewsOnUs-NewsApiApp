@@ -43,4 +43,3 @@ Technologies Used in the News On Us! (NewsApi)
 - Log Out
 
 - Showing each user's favorite news separately for different users
-
