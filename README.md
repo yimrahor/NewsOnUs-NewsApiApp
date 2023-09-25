@@ -43,5 +43,4 @@ Technologies Used in the News On Us! (NewsApi)
 - Log Out
 
 - Showing each user's favorite news separately for different users
-![image](https://github.com/yimrahor/NewsOnUs-NewsApiApp/assets/107870673/88a4193f-878d-4889-9aab-20c21a6a1ae3)
 
